@@ -5,5 +5,9 @@
 <ul>
   <li>
     <%= link_to "Edit Article", edit_article_path(@article) %>
+    <%= link_to "Destroy Article", article_path(@article), data: {
+                    turbo_method: :delete,
+                    turbo_config: "Are you sure?"
+    } %>
   </li>
 </ul>
